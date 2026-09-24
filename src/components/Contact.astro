@@ -1,0 +1,109 @@
+---
+import CopyContact from './CopyContact.astro';
+---
+
+<section id="kapcsolat" class="section contact">
+	<div class="container contact-inner">
+		<div>
+			<p class="eyebrow">Kapcsolat</p>
+			<h2>Van egy problémád?</h2>
+			<p>
+				Hívj vagy küldj e-mailt, és egyeztessünk a feladatról!
+			</p>
+		</div>
+
+		<div class="contact-details">
+			<CopyContact type="phone" value="+36 12 3456 789" />
+			<CopyContact type="email" value="barabasi.business@gmail.com" />
+		</div>
+	</div>
+</section>
+
+<style>
+	.section {
+		padding: 120px 0;
+	}
+
+	.container {
+		width: min(1120px, calc(100% - 40px));
+		margin: 0 auto;
+	}
+
+	.contact {
+		background: #d97706;
+		color: white;
+	}
+
+	.eyebrow {
+		margin: 0 0 18px;
+		font-size: 13px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		color: #666;
+	}
+
+	.contact .eyebrow {
+		color: #f8dfbd;
+	}
+
+	h2 {
+		margin: 0 0 50px;
+		font-size: clamp(36px, 5vw, 60px);
+		line-height: 1;
+		letter-spacing: -0.05em;
+	}
+
+	.contact-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: end;
+		gap: 50px;
+	}
+
+	.contact h2 {
+		margin-bottom: 20px;
+	}
+
+	.contact p {
+		font-size: 18px;
+	}
+
+	.contact-details {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 10px;
+		font-size: 24px;
+		font-weight: 700;
+	}
+
+	.contact-details a {
+		text-decoration: none;
+	}
+
+	.contact-details a:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 800px) {
+		.contact-inner {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.contact-details {
+			align-items: flex-start;
+		}
+	}
+
+	@media (max-width: 500px) {
+		.container {
+			width: min(100% - 28px, 1120px);
+		}
+
+		.section {
+			padding: 80px 0;
+		}
+	}
+</style>

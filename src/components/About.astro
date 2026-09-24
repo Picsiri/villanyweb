@@ -1,0 +1,88 @@
+<section id="rolam" class="section section-alt">
+	<div class="container about">
+		<div>
+			<p class="eyebrow">Rólam</p>
+			<h2>Precíz munka, érthető kommunikáció.</h2>
+		</div>
+
+		<div>
+			<p>
+				Mechatronikai mérnöki végzettséggel rendelkezem, ami a gépészet, az elektronika és a számítástechnika határterülete. Villanyszerelőként ez a mérnöki szemlélet a legnagyobb előnyöm: nemcsak vakon építem ki a hálózatot, hanem rendszerszinten látom át a hálózat működését.
+			</p>
+
+			<p>
+				Legyen szó egy modern konyha áramellátásáról vagy az okosotthon-rendszerek gépészeti integrációjáról, a mérnöki precizitást garantálom.
+			</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section {
+		padding: 120px 0;
+	}
+
+	.section-alt {
+		background: #171717;
+		color: white;
+	}
+
+	.container {
+		width: min(1120px, calc(100% - 40px));
+		margin: 0 auto;
+	}
+
+	.eyebrow {
+		margin: 0 0 18px;
+		font-size: 13px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		color: #666;
+	}
+
+	.section-alt .eyebrow {
+		color: #aaa;
+	}
+
+	h2 {
+		margin: 0 0 50px;
+		font-size: clamp(36px, 5vw, 60px);
+		line-height: 1;
+		letter-spacing: -0.05em;
+	}
+
+	.about {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 100px;
+	}
+
+	.about h2 {
+		margin-bottom: 0;
+	}
+
+	.about p {
+		margin: 0 0 24px;
+		color: #bbb;
+		font-size: 18px;
+		line-height: 1.7;
+	}
+
+	@media (max-width: 800px) {
+		.about {
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
+	}
+
+	@media (max-width: 500px) {
+		.container {
+			width: min(100% - 28px, 1120px);
+		}
+
+		.section {
+			padding: 80px 0;
+		}
+	}
+</style>

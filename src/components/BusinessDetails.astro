@@ -1,0 +1,81 @@
+<section class="business-details">
+	<div class="container">
+		<p class="eyebrow">Vállalkozási adatok</p>
+
+		<div class="details">
+			<div>
+				<span>Vállalkozó neve</span>
+				<strong>Barabási Richárd e.v.</strong>
+			</div>
+
+			<div>
+				<span>Székhely</span>
+				<strong>1204 Budapest, Vízisport utca 5. 2/2</strong>
+			</div>
+
+			<div>
+				<span>Adószám</span>
+				<strong>12345678-1-42</strong>
+			</div>
+
+			<div>
+				<span>Nyilvántartási szám</span>
+				<strong>12345678</strong>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.business-details {
+		padding: 60px 0;
+		background: #f7f7f5;
+		border-top: 1px solid #e3e3df;
+	}
+
+	.container {
+		width: min(1120px, calc(100% - 40px));
+		margin: 0 auto;
+	}
+
+	.eyebrow {
+		margin: 0 0 30px;
+		font-size: 13px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		color: #666;
+	}
+
+	.details {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px 60px;
+	}
+
+	.details div {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	.details span {
+		font-size: 13px;
+		color: #777;
+	}
+
+	.details strong {
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	@media (max-width: 600px) {
+		.container {
+			width: min(100% - 28px, 1120px);
+		}
+
+		.details {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

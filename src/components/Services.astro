@@ -1,0 +1,78 @@
+---
+import ServiceCard from './ServiceCard.astro';
+---
+
+<section id="szolgaltatasok" class="services">
+	<div class="container">
+		<p class="eyebrow">Szolgáltatások</p>
+		<h2>Amiben tudok segíteni</h2>
+
+		<div class="service-grid">
+            <ServiceCard
+				icon="✏️"
+				title="Hálózat-vázolás"
+				description="Nyomvonalak és szerelvényhelyek közös átgondolása, felvázolása."
+			/>
+
+			<ServiceCard
+				icon="⚡"
+				title="Villanyszerelés"
+				description="Elektromos hálózatok teljes körű kiépítése, bővítése és biztonságos átalakítása."
+			/>
+
+			<ServiceCard
+				icon="🐞"
+				title="Hibakeresés és javítás"
+				description="Elektromos hibák feltárása, elhárítása és a hibás hálózati elemek cseréje."
+			/>
+
+			<ServiceCard
+				icon="🏠"
+				title="Okosotthonok"
+				description="Modern intelligens rendszerek ötlettől a teljes körű kiépítésig."
+			/>
+		</div>
+	</div>
+</section>
+
+<style>
+	.services {
+		padding: 100px 0;
+	}
+
+	.container {
+		width: min(1120px, calc(100% - 40px));
+		margin: 0 auto;
+	}
+
+	.eyebrow {
+		margin: 0 0 16px;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	h2 {
+		margin: 0 0 40px;
+		font-size: 42px;
+	}
+
+	.service-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 16px;
+	}
+
+	@media (max-width: 900px) {
+		.service-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 600px) {
+		.service-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

@@ -1,0 +1,99 @@
+<section class="hero">
+	<div class="container hero-inner">
+		<div class="hero-content">
+			<p class="eyebrow">Villanyszerelés · Újbuda és környéke</p>
+
+			<h1>
+				Intelligens<br />
+				<span>villanyszerelés.</span>
+			</h1>
+
+			<p class="hero-text">
+				Intelligens otthon, villamos hibakeresés, javítás, új kiépítések. <br />
+				Szakszerűen, átláthatóan, dokumentáltan.
+			</p>
+
+		</div>
+	</div>
+</section>
+
+<style>
+	.container {
+		width: min(1120px, calc(100% - 40px));
+		margin: 0 auto;
+	}
+
+	.hero {
+		min-height: 620px;
+		display: flex;
+		align-items: center;
+		background: #e8e8e3;
+	}
+
+	.hero-inner {
+		padding-top: 50px;
+	}
+
+	.hero-content {
+		max-width: 720px;
+	}
+
+	.eyebrow {
+		margin: 0 0 18px;
+		font-size: 13px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		color: #666;
+	}
+
+	h1 {
+		margin: 0;
+		font-size: clamp(56px, 8vw, 100px);
+		line-height: 0.95;
+		letter-spacing: -0.065em;
+	}
+
+	h1 span {
+		color: #d97706;
+	}
+
+	.hero-text {
+		max-width: 560px;
+		margin: 32px 0;
+		font-size: 20px;
+		line-height: 1.6;
+		color: #555;
+	}
+
+	.button {
+		display: inline-block;
+		padding: 14px 22px;
+		border-radius: 8px;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.button-primary {
+		background: #171717;
+		color: white;
+	}
+
+	.button-primary:hover {
+		background: #333;
+	}
+
+	.button-secondary {
+		border: 1px solid #aaa;
+	}
+
+	@media (max-width: 500px) {
+		.container {
+			width: min(100% - 28px, 1120px);
+		}
+
+		.hero {
+			min-height: 650px;
+		}
+	}
+</style>

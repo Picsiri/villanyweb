@@ -1,0 +1,61 @@
+---
+interface Props {
+	type: 'phone' | 'email';
+	value: string;
+}
+
+const { type, value } = Astro.props;
+---
+
+<div class="contact-row">
+	<a href={type === 'phone' ? `tel:${value}` : `mailto:${value}`}>
+		{value}
+	</a>
+
+	<button type="button" data-copy={value} aria-label={`Másolás: ${value}`}>
+		Másolás
+	</button>
+</div>
+
+<script>
+	document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((button) => {
+		button.addEventListener('click', async () => {
+			const value = button.dataset.copy;
+
+			if (!value) return;
+
+			await navigator.clipboard.writeText(value);
+
+			const original = button.textContent;
+			button.textContent = 'Másolva!';
+
+			setTimeout(() => {
+				button.textContent = original;
+			}, 1500);
+		});
+	});
+</script>
+
+<style>
+	.contact-row {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.contact-row a {
+		text-decoration: none;
+	}
+
+	button {
+		border: 1px solid #ccc;
+		background: transparent;
+		border-radius: 6px;
+		padding: 5px 9px;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background: #f2f2f2;
+	}
+</style>

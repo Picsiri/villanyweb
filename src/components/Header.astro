@@ -1,0 +1,65 @@
+<header class="site-header">
+	<div class="container header-inner">
+		<a class="logo" href="/villanyweb">B-Villany</a>
+
+		<nav>
+			<a href="#szolgaltatasok">Szolgáltatások</a>
+			<a href="#rolam">Rólam</a>
+			<a href="#kapcsolat">Kapcsolat</a>
+		</nav>
+	</div>
+</header>
+
+<style>
+	.container {
+		width: min(1120px, calc(100% - 40px));
+		margin: 0 auto;
+	}
+
+	.site-header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+	}
+
+	.header-inner {
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		text-decoration: none;
+	}
+
+	nav {
+		display: flex;
+		gap: 28px;
+		font-size: 14px;
+	}
+
+	nav a {
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 800px) {
+		nav {
+			display: none;
+		}
+	}
+
+	@media (max-width: 500px) {
+		.container {
+			width: min(100% - 28px, 1120px);
+		}
+	}
+</style>
