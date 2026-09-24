@@ -7,7 +7,7 @@ import CopyContact from './CopyContact.astro';
 		<div>
 			<p class="eyebrow">Kapcsolat</p>
 			<h2>Van egy problémád?</h2>
-			<p>
+			<p class="message">
 				Hívj vagy küldj e-mailt, és egyeztessünk a feladatról!
 			</p>
 		</div>
@@ -30,21 +30,11 @@ import CopyContact from './CopyContact.astro';
 	}
 
 	.contact {
-		background: #d97706;
-		color: white;
+		background: var(--color-muted);
 	}
 
-	.eyebrow {
-		margin: 0 0 18px;
-		font-size: 13px;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		color: #666;
-	}
-
-	.contact .eyebrow {
-		color: #f8dfbd;
+	.message {
+		color: var(--color-electric);
 	}
 
 	h2 {
@@ -52,6 +42,7 @@ import CopyContact from './CopyContact.astro';
 		font-size: clamp(36px, 5vw, 60px);
 		line-height: 1;
 		letter-spacing: -0.05em;
+		color: var(--color-ink);
 	}
 
 	.contact-inner {
@@ -61,14 +52,6 @@ import CopyContact from './CopyContact.astro';
 		gap: 50px;
 	}
 
-	.contact h2 {
-		margin-bottom: 20px;
-	}
-
-	.contact p {
-		font-size: 18px;
-	}
-
 	.contact-details {
 		display: flex;
 		flex-direction: column;
@@ -76,14 +59,7 @@ import CopyContact from './CopyContact.astro';
 		gap: 10px;
 		font-size: 24px;
 		font-weight: 700;
-	}
-
-	.contact-details a {
-		text-decoration: none;
-	}
-
-	.contact-details a:hover {
-		text-decoration: underline;
+		color: var(--color-white);
 	}
 
 	@media (max-width: 800px) {

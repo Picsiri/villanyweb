@@ -17,8 +17,8 @@ const { icon, title, description } = Astro.props;
 <style>
     .service-card {
         padding: 28px;
-        background: white;
-        border: 1px solid #e3e3df;
+        background: color-mix(in srgb, var(--color-electric) 25%, transparent);
+        border: 1px solid var(--color-electric);
         border-radius: 12px;
     }
 
@@ -30,11 +30,12 @@ const { icon, title, description } = Astro.props;
     h3 {
         margin: 0 0 12px;
         font-size: 20px;
+        color: var(--color-ink);
     }
 
     p {
         margin: 0;
-        color: #666;
         line-height: 1.6;
+        color: var(--color-cream);
     }
 </style>

@@ -6,11 +6,11 @@
 		</div>
 
 		<div>
-			<p>
+			<p class="describe">
 				Mechatronikai mérnöki végzettséggel rendelkezem, ami a gépészet, az elektronika és a számítástechnika határterülete. Villanyszerelőként ez a mérnöki szemlélet a legnagyobb előnyöm: nemcsak vakon építem ki a hálózatot, hanem rendszerszinten látom át a hálózat működését.
 			</p>
 
-			<p>
+			<p class="describe">
 				Legyen szó egy modern konyha áramellátásáról vagy az okosotthon-rendszerek gépészeti integrációjáról, a mérnöki precizitást garantálom.
 			</p>
 		</div>
@@ -23,8 +23,7 @@
 	}
 
 	.section-alt {
-		background: #171717;
-		color: white;
+		background: var(--color-ink);
 	}
 
 	.container {
@@ -32,24 +31,12 @@
 		margin: 0 auto;
 	}
 
-	.eyebrow {
-		margin: 0 0 18px;
-		font-size: 13px;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		color: #666;
-	}
-
-	.section-alt .eyebrow {
-		color: #aaa;
-	}
-
 	h2 {
 		margin: 0 0 50px;
 		font-size: clamp(36px, 5vw, 60px);
 		line-height: 1;
 		letter-spacing: -0.05em;
+		color: var(--color-cream);
 	}
 
 	.about {
@@ -58,15 +45,11 @@
 		gap: 100px;
 	}
 
-	.about h2 {
-		margin-bottom: 0;
-	}
-
-	.about p {
+	.describe {
 		margin: 0 0 24px;
-		color: #bbb;
 		font-size: 18px;
 		line-height: 1.7;
+		color: var(--color-cream);
 	}
 
 	@media (max-width: 800px) {

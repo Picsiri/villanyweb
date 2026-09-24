@@ -20,6 +20,23 @@ const { title = 'Villanyszerelés' } = Astro.props;
 </html>
 
 <style is:global>
+	:root {
+		/* Core */
+		--color-ink: #172121;
+		--color-white: #ffffff;
+
+		/* Backgrounds, texts */
+		--color-eyebrow: #73d2de;
+		--color-cream: #ede9de;
+		--color-muted: #777;
+
+		/* Accents */
+		--color-electric: #fbb13c;
+
+		/* Sizes */
+		--size-eyebrow: 14px;
+	}
+
 	* {
 		box-sizing: border-box;
 	}
@@ -34,10 +51,19 @@ const { title = 'Villanyszerelés' } = Astro.props;
 			Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 			sans-serif;
 		color: #171717;
-		background: #f7f7f5;
+		background: #666666;
 	}
 
 	a {
 		color: inherit;
+	}
+	
+	.eyebrow {
+		margin: 0 0 16px;
+		font-size: var(--size-eyebrow);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		color: var(--color-eyebrow);
 	}
 </style>
