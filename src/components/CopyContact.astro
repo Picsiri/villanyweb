@@ -41,13 +41,18 @@ const { type, value } = Astro.props;
 		display: flex;
 		align-items: center;
 		gap: 10px;
+    	min-width: 0;
 	}
 
-	.contact-row a {
+	.contact-row a,
+	.contact-row span {
+		min-width: 0;
+		overflow-wrap: anywhere;
 		text-decoration: none;
 	}
 
 	button {
+		flex-shrink: 0;
 		border: 1px solid #ccc;
 		background: transparent;
 		border-radius: 6px;

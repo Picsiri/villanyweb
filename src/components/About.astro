@@ -1,9 +1,16 @@
-<section id="rolam" class="section section-alt">
+---
+import me from "../assets/me.jpg";
+---
+
+<section id="about" class="section section-alt">
 	<div class="container about">
 		<div>
 			<p class="eyebrow">Rólam</p>
+
 			<h2>Precíz munka, érthető kommunikáció.</h2>
 		</div>
+
+		<img src={me.src} alt="Barabási Richárd villanyszerelő" />
 
 		<div>
 			<p class="describe">
@@ -13,7 +20,12 @@
 			<p class="describe">
 				Legyen szó egy modern konyha áramellátásáról vagy az okosotthon-rendszerek gépészeti integrációjáról, a mérnöki precizitást garantálom.
 			</p>
+			
+			<p class="describe">
+				Egyéb projekteimről bővebben itt: <a href="https://picsiri.github.io">link</a>
+			</p>
 		</div>
+		 
 	</div>
 </section>
 
@@ -30,9 +42,16 @@
 		width: min(1120px, calc(100% - 40px));
 		margin: 0 auto;
 	}
+	.about img {
+		margin-top: 10px;
+		width: 100%;
+		aspect-ratio: 0.77;
+		object-fit: cover;
+		display: block;
+	}
 
 	h2 {
-		margin: 0 0 50px;
+		margin: 50px 0 50px;
 		font-size: clamp(36px, 5vw, 60px);
 		line-height: 1;
 		letter-spacing: -0.05em;
@@ -41,8 +60,8 @@
 
 	.about {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 100px;
+		grid-template-columns: 1.5fr 1fr 1.5fr;
+		gap: 30px;
 	}
 
 	.describe {
