@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Otthonautomatizálás | B-Villany">
+	<Header />
+
+	<main class="automation-page">
+		<section class="intro">
+			<h1>Az otthonod igazodjon hozzád.</h1>
+			<p class="lead">
+				Egy jól kialakított okosotthon kényelmesebbé és energiahatékonyabbá teszi a mindennapjaidat.<br>
+				Megszabhatsz előre definiált folyamatokat, de a tanuló rendszereknek köszönhetően az otthonod idővel magától is alkalmazkozhat a szokásaidhoz és az igényeidhez.
+			</p>
+			<p>
+				Alapesetben a nyílt forráskódú <a href="https://www.home-assistant.io/"><strong>Home Assistant</strong></a> platformot használom,
+				és minden automatizálást az adott otthonhoz, a meglévő eszközökhöz, valamint az ott élők igényeihez szabok.
+			</p>
+			<p>
+				A helyi vezérlés (self-hosting) híve vagyok, de igény esetén felhőalapú, központi szolgáltatókra épülő rendszereket (pl. <a href="https://home.google.com/welcome/">Google Home</a>, <a href="https://ewelink.cc/"> eWeLink</a>) is kialakítok. Természetesen az előbbinek magasabb lehet a karbantartás igénye, de sajnos napjainkban egyre gyakoribbak az internet kimaradások, kellemetlen <a href="https://www.matteralpha.com/industry-news/how-an-aws-outage-left-the-smart-home-ecosystem-in-the-dark">problémákat</a> okozva. A döntéshez segédlet <a href="https://homeautocentral.com/local-vs-cloud-smart-home-control/">itt</a>.
+			</p>
+		</section>
+
+		<section class="examples" aria-labelledby="examples-title">
+			<h2 id="examples-title">Mire jó a gyakorlatban?</h2>
+			<p>
+				Szenzorok és végpontok fixek, a konfiguráció szoftver definiált, végtelenségig alakítható.
+			</p>
+			<div class="example-grid">
+				<article class="example-card">
+					<h3>Világítás, ami követi a napot</h3>
+					<p>
+						A lámpák időzítése naplementéhez viszonyítva, ott is ahol a fényerő szenzor nem segít.
+					</p>
+				</article>
+
+				<article class="example-card">
+					<h3>Kényelmes hőmérséklet, felesleges fűtés nélkül</h3>
+					<p>
+						A fűtés igazodhat a napirendhez és az otthonlétedhez. Ha elindulsz,
+						energiatakarékosabb beállításra válthat, hazaérkezésed előtt pedig
+						újra kellemes hőmérsékletet készíthet.
+					</p>
+				</article>
+
+				<article class="example-card">
+					<h3>Átláthatóbb energiahasználat</h3>
+					<p>
+						A fogyasztásmérés segít észrevenni, mikor és melyik eszköz használ
+						több energiát. Időzítéssel vagy automatizálással a nagyobb
+						fogyasztású berendezések működése is jobban a napodhoz igazítható.
+					</p>
+				</article>
+
+				<article class="example-card">
+					<h3>Értesítés, ha valami szokatlan történik</h3>
+					<p>
+						Nyitásérzékelő, mozgásérzékelő vagy vízszivárgás-érzékelő esetén
+						értesítést kaphatsz, ha távollétedben esemény történik. Megfelelő
+						eszközökkel egyes helyzetekre automatikus beavatkozás is beállítható.
+					</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="personalization">
+			<h2>Nem sablonrendszer. A te igényeidre szabva.</h2>
+			<p>
+				Lehet néhány praktikus automatizálással kezdeni, majd később tovább
+				bővíteni. Közösen átbeszéljük, mit szeretnél egyszerűbbé tenni, és ehhez
+				állítjuk össze a rendszert.
+			</p>
+			<a href="/#contact">Beszéljük át az elképzelésedet</a>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.automation-page {
+		min-height: 100vh;
+		padding: 140px 20px 80px;
+		background: var(--color-cream);
+		color: var(--color-ink);
+	}
+
+	.intro,
+	.examples,
+	.personalization {
+		width: min(100%, 1000px);
+		margin: 0 auto;
+	}
+
+	.intro {
+		max-width: 820px;
+		margin-bottom: 76px;
+	}
+
+	.eyebrow {
+		margin: 0 0 16px;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: #666;
+	}
+
+	h1 {
+		max-width: 800px;
+		margin: 0 0 28px;
+		font-size: clamp(44px, 8vw, 82px);
+		line-height: 0.98;
+		letter-spacing: -0.06em;
+	}
+
+	.intro p:not(.eyebrow),
+	.personalization p {
+		font-size: 18px;
+		line-height: 1.7;
+		color: var(--color-muted);
+	}
+
+	.intro .lead {
+		font-size: clamp(20px, 3vw, 25px);
+		color: var(--color-ink);
+	}
+
+	h2 {
+		margin: 0 0 28px;
+		font-size: clamp(30px, 5vw, 44px);
+		line-height: 1.1;
+		letter-spacing: -0.04em;
+	}
+
+	.example-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 18px;
+	}
+
+	.example-card {
+		padding: 28px;
+		border-radius: 12px;
+		background: #fff;
+	}
+
+	.example-card h3 {
+		margin: 0 0 12px;
+		font-size: 22px;
+		line-height: 1.2;
+	}
+
+	.example-card p {
+		margin: 0;
+		font-size: 16px;
+		line-height: 1.65;
+		color: var(--color-muted);
+	}
+
+	.personalization {
+		margin-top: 76px;
+		padding: 36px;
+		border-radius: 12px;
+		background: var(--color-ink);
+		color: var(--color-white);
+	}
+
+	.personalization p {
+		color: #ddd;
+	}
+
+	.personalization a {
+		display: inline-block;
+		margin-top: 8px;
+		font-weight: 700;
+		color: var(--color-electric);
+	}
+
+	@media (max-width: 600px) {
+		.automation-page {
+			padding: 112px 20px 56px;
+		}
+
+		.example-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.example-card,
+		.personalization {
+			padding: 24px;
+		}
+
+		.intro,
+		.personalization {
+			margin-bottom: 56px;
+		}
+
+		.personalization {
+			margin-top: 56px;
+		}
+	}
+</style>
